@@ -60,3 +60,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# ----------
+# install all this for bootstrap 4 to work:
+# ----------
+# Bootstrap installer says sprockets-rails required
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+# Add jQuery
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.14'
+gem 'bootstrap', '~> 4.3.1'
