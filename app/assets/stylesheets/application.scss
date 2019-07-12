@@ -16,27 +16,75 @@
 @import "bootstrap";
 
 
-$v-colors-darker-bkgd: #052441;
+$v-colors-darker-bkgd: #08131e;
+
+$v-colors-darkbgd: #081e33;
 
 $v-colors-logo-on-dark: #a6ffc5;
 
 $v-colors-accent-on-dark: #ff5f5d;
 
+.videosity-dark-background {
+  background-color: $v-colors-darker-bkgd;
+}
+
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
-  box-shadow: 0px 1px 3px #2a2a2a;
+  box-shadow: 0 0 2px #000;
   background: image_url('squairy_dark_2X.png');
 }
 
 .navbar-dark {
-  background-color: $v-colors-darker-bkgd;
+  background-color: $v-colors-darkbgd;
 
   .navbar-brand {
     color: $v-colors-logo-on-dark;
     font-family: "Helvetica Neue", Helvetica;
     font-weight: 900;
     font-size: 1.75rem;
-    letter-spacing: -1pt;
+    letter-spacing: -.04em;
   }
+}
+
+.hero {
+  background: image_url('geert-pieters-A2cHC7Sfh9w-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+  padding-top: 2em;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+.frosty {
+  background: rgba(25, 25, 25, 0.5);
+  color: $v-colors-accent-on-dark;
+  border: 1px solid;
+  border-color: $v-colors-accent-on-dark;
+
+  h1 {
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 100;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  }
+
+  h2 {
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 200;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  }
+
+  .btn {
+    border-radius: 0;
+    border: none;
+    background: $v-colors-accent-on-dark;
+    color: white;
+  }
+
 }
