@@ -73,3 +73,6 @@ gem 'bootstrap', '~> 4.3.1'
 
 # Simple form
 gem 'simple_form'
+
+# Devise
+gem 'devise'
