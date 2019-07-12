@@ -70,3 +70,6 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.14'
 gem 'bootstrap', '~> 4.3.1'
+
+# Simple form
+gem 'simple_form'
