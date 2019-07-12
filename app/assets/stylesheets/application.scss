@@ -16,21 +16,31 @@
 @import "bootstrap";
 
 
-$v-colors-darker-bkgd: #08131e;
+$v-colors-darker-bkgd: #020203;
 
 $v-colors-darkbgd: #081e33;
+
+$v-colors-text-main-darkbgd: rgba(255, 255, 255, 0.8);
 
 $v-colors-logo-on-dark: #a6ffc5;
 
 $v-colors-accent-on-dark: #ff5f5d;
 
-.videosity-dark-background {
+$v-fonts-helvetica-stack: "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif;
+
+$v-fonts-monospace-stack: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+body {
+  font-family: $v-fonts-helvetica-stack;
+  font-weight: 200;
+}
+
+body.videosity-dark-background {
   background-color: $v-colors-darker-bkgd;
+  color: $v-colors-text-main-darkbgd;
 }
 
 .navbar {
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 200;
   box-shadow: 0 0 2px #000;
   background: image_url('squairy_dark_2X.png');
 }
@@ -55,7 +65,6 @@ $v-colors-accent-on-dark: #ff5f5d;
   background-size: cover;
   height: 370px;
   padding-top: 2em;
-  box-shadow: 0px 3px 8px #2a2a2a;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
@@ -87,4 +96,17 @@ h1, h2, h3, h4, h5, h6, .navbar {
     color: white;
   }
 
+}
+
+.feature {
+  width: 100%;
+}
+
+.feature-dark {
+  color: $v-colors-logo-on-dark;
+}
+
+.code-on-dark {
+  font-family: $v-fonts-monospace-stack;
+  color: $v-colors-accent-on-dark;
 }
