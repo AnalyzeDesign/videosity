@@ -14,3 +14,29 @@
  *= require_self
  */
 @import "bootstrap";
+
+
+$v-colors-darker-bkgd: #052441;
+
+$v-colors-logo-on-dark: #a6ffc5;
+
+$v-colors-accent-on-dark: #ff5f5d;
+
+.navbar {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background: image_url('squairy_dark_2X.png');
+}
+
+.navbar-dark {
+  background-color: $v-colors-darker-bkgd;
+
+  .navbar-brand {
+    color: $v-colors-logo-on-dark;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 900;
+    font-size: 1.75rem;
+    letter-spacing: -1pt;
+  }
+}
