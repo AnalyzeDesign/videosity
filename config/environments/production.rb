@@ -91,4 +91,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Add default url for mailer for use of Devise gem
+  config.action_mailer.default_url_options = { host: 'videosity.herokuapp.com'}
 end

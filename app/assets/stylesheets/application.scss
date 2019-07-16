@@ -110,3 +110,25 @@ h1, h2, h3, h4, h5, h6, .navbar {
   font-family: $v-fonts-monospace-stack;
   color: $v-colors-accent-on-dark;
 }
+
+.v-main-layout-box {
+  border: 1px solid #ccc;
+  border-color: $v-colors-accent-on-dark;
+  margin: 1em;
+  padding: 1em;
+
+  h1, h2 {
+    color: $v-colors-accent-on-dark;
+    font-family: $v-fonts-helvetica-stack;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+    font-weight: 100;
+    margin-bottom: 1em;
+  }
+
+  .btn {
+    border-radius: 0;
+    border: none;
+    background: $v-colors-accent-on-dark;
+    color: white;
+  }
+}
