@@ -76,3 +76,6 @@ gem 'simple_form'
 
 # Devise
 gem 'devise'
+
+# Carrierwave
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
