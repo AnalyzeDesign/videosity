@@ -85,3 +85,6 @@ gem 'figaro'
 
 # Add fog
 gem "fog-aws"
+
+# Add minimagick
+gem "mini_magick"
