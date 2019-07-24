@@ -77,14 +77,17 @@ gem 'simple_form'
 # Devise
 gem 'devise'
 
-# Carrierwave
-gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
-
 # Add figaro
 gem 'figaro'
 
+# Carrierwave
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+
 # Add fog
-gem "fog-aws"
+# gem "fog-aws"
 
 # Add minimagick
 gem "mini_magick"
+
+# Add carrierwave-aws to replace fog
+gem 'carrierwave-aws'
