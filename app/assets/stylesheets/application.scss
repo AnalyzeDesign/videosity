@@ -78,13 +78,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
   border-color: $v-colors-accent-on-dark;
 
   h1 {
-    font-family: "Helvetica Neue", Helvetica;
+    font-family: $v-fonts-helvetica-stack;
     font-weight: 100;
     text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
   }
 
   h2 {
-    font-family: "Helvetica Neue", Helvetica;
+    font-family: $v-fonts-helvetica-stack;
     font-weight: 200;
     text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
   }
@@ -143,4 +143,28 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .clr {
   clear: both;
+}
+
+.lesson {
+  background-color: black;
+  margin-top: 10px;
+  height: 130px;
+
+  a {
+    color: white;
+    font-family: $v-fonts-helvetica-stack;
+    font-weight: 100;
+    font-size: 15px;
+  }
+
+  strong {
+    font-weight: 100;
+    font-size: 25px;
+  }
+}
+
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #e4e4e4;
+  padding: 20px;
 }
