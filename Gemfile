@@ -91,3 +91,6 @@ gem "mini_magick"
 
 # Add carrierwave-aws to replace fog
 gem 'carrierwave-aws'
+
+# Add stripe
+gem 'stripe'
