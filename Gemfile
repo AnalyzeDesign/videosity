@@ -94,3 +94,6 @@ gem 'carrierwave-aws'
 
 # Add stripe
 gem 'stripe'
+
+# Add ranked-model
+gem 'ranked-model'
