@@ -1,22 +1,24 @@
 <script>
   $(function() {
-    $('.lessons').sortable({
+    $('#lesson, #section').sortable({
       update: function( event, ui ) {
-        console.log(ui.item.data('update-url'));
-        console.log(ui.item.index());
-        $.ajax({
-          type: 'PUT',
-          url: ui.item.data('update-url'),
-          dataType: 'json',
-          data: {
-            authenticity_token: Rails.csrfToken(),
-            lesson: {
-              row_order_position: ui.item.index()
-            }
-          }
-        });
-      }
-    });
+        let d = {
+          authenticity_token: Rails.csrfToken()
+        };
+        d[event.target.id] = {
+          row_order_position: ui.item.index()
+        };
+        console.log(d);
+          $.ajax({
+            type: 'PUT',
+            url: ui.item.data('update-url'),
+            dataType: 'json',
+            data: d
+          });
+
+        }
+
+      });
    });
 
 </script>
@@ -30,12 +32,12 @@
     <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary btn-lg' %>
   </div>
 
-  <ul>
-    <% current_course.sections.each do |section| %>
-      <li>
+  <ul id="section">
+    <% current_course.sections.rank(:row_order).each do |section| %>
+      <li data-update-url="<%= instructor_section_path(section) %>">
         <%= section.title %>
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
-        <ul class="lessons">
+        <ul id="lesson">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path(lesson) %>">
               <strong><%= lesson.title %></strong>
