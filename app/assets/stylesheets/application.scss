@@ -215,3 +215,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
   border-color: #e4e4e4 #bebebd #e4e4e4;
   padding: 20px;
 }
+
+.modal-content {
+  color: black;
+}
+.modal-header {
+  .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem;
+  }
+}
