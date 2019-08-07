@@ -96,6 +96,8 @@
       <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
         <div class="modal-body">
             <%= f.input :title %>
+
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -121,6 +123,8 @@
             <%= f.input :title %>
             <%= f.input :subtitle %>
             <%= f.input :video %>
+
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
