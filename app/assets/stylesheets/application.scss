@@ -20,9 +20,7 @@
 @import "font-awesome";
 
 
-$v-colors-darker-bkgd: #020203;
-
-$v-colors-darkbgd: #081e33;
+$v-colors-darkbgd: #000;
 
 $v-colors-text-main-darkbgd: rgba(255, 255, 255, 0.8);
 
@@ -34,20 +32,26 @@ $v-fonts-helvetica-stack: "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-
 
 $v-fonts-monospace-stack: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
+$v-fonts-serif-stack: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+@mixin logotype {
+  color: $v-colors-logo-on-dark;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 900;
+  font-size: 1.75rem;
+  letter-spacing: -.04em;
+}
+
 body {
   font-family: $v-fonts-helvetica-stack;
   font-weight: 200;
 }
 
 body.videosity-dark-background {
-  background-color: $v-colors-darker-bkgd;
+  background-color: $v-colors-darkbgd;
   color: $v-colors-text-main-darkbgd;
 }
 
-.navbar {
-  box-shadow: 0 0 2px #000;
-  background: image_url('squairy_dark_2X.png');
-}
 
 .navbar-dark {
   background-color: $v-colors-darkbgd;
@@ -61,36 +65,55 @@ body.videosity-dark-background {
   }
 }
 
+
 .hero {
-  background: image_url('geert-pieters-A2cHC7Sfh9w-unsplash.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 370px;
   padding-top: 2em;
+  position:relative;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
 
-.frosty {
-  background: rgba(25, 25, 25, 0.5);
+video.splash {
+    z-index: -100;
+    transition: 1s opacity;
+    background: image_url('library-still.jpg') no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    opacity: .3;
+}
+.stopfade {
+   opacity: .3;
+}
+
+#frosty {
   color: $v-colors-accent-on-dark;
   border: 1px solid;
   border-color: $v-colors-accent-on-dark;
+  font-family: $v-fonts-serif-stack;
+
+  position:absolute;
+  top:10%;
+  left:0;
+  z-index:100;
+  padding-top:1.5em;
+  padding-bottom:.2em;
 
   h1 {
-    font-family: $v-fonts-helvetica-stack;
-    font-weight: 100;
-    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+    @include logotype
+    display: inline;
+    line-height: 1.2em;
   }
 
   h2 {
-    font-family: $v-fonts-helvetica-stack;
-    font-weight: 200;
-    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+    font-family: $v-fonts-serif-stack;
+    font-weight: 600;
+    font-style: italic;
+    display: inline;
+    margin-left:.5em;
+    line-height: 1.2em;
   }
 
   .btn {
@@ -98,12 +121,39 @@ h1, h2, h3, h4, h5, h6, .navbar {
     border: none;
     background: $v-colors-accent-on-dark;
     color: white;
+    font-family: $v-fonts-helvetica-stack;
+    margin-top: 1em;
   }
 
 }
 
 .feature {
   width: 100%;
+  margin:0;
+
+  .intros {
+    padding: 2.5%;
+    min-height: 250px;
+  }
+
+  .courses {
+    background: image_url('typewriter.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .enroll {
+    background: image_url('fan.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .community {
+    background: image_url('code.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  p {
+    font-size:1.5em;
+  }
 }
 
 .feature-dark {
@@ -118,7 +168,6 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .v-main-layout-box {
   border: 1px solid #ccc;
   border-color: $v-colors-accent-on-dark;
-  margin: 1em;
   padding: 1em;
 
   h1, h2 {
